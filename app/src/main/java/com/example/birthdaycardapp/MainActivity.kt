@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -44,17 +45,17 @@ fun GreetingText(name: String, from: String, modifier: Modifier= Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Happy birthday, $name",
-            fontSize = 100.sp,
+            text = stringResource(R.string.happy_birthday_text, name),
+            fontSize = 95.sp,
             lineHeight = 116.sp,
             textAlign = TextAlign.Center
         )
         Text(
-            text = "From $from",
+            text = stringResource(R.string.signature_text, from),
             fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(Alignment.End)
+                .align(Alignment.CenterHorizontally)
         )
     }
 }
